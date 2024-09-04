@@ -22,7 +22,7 @@ app.use(express.urlencoded({ limit: "30mb", extended: true }));
 
 const port = process.env.PORT || 5000;
 
-app.use("/", async (req,res) => {
+app.get("/", async (req,res) => {
 	res.status(200).json({message: "SERVEUR OK"});
 })
 
